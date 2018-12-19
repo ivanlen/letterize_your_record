@@ -8,7 +8,7 @@ Created on Sat Oct 22 22:40:08 2016
 import scipy, numpy as np
 
 def stft(x, fftsize=1024, overlap=4):   
-    hop = fftsize / overlap
+    hop = int(fftsize / overlap)
     w = scipy.hanning(fftsize+1)[:-1]      # better reconstruction with this trick +1)[:-1]  
     return np.array([np.fft.rfft(w*x[i:i+fftsize]) for i in range(0, len(x)-fftsize, hop)])
 
