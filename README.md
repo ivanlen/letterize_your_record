@@ -1,4 +1,4 @@
-# Project Title
+# Letterize your record
 
 This is a python script that generates *nice* written messages from a audio records:
 
@@ -20,13 +20,7 @@ Clone the repo and be sure to have the needed packages listed in [requirements.t
 
 Install the packages in [requirements.txt](requirements.txt) either using pip, conda or compiling them.
 
-```
-Give examples
-```
-
-### Installing
-
-No installation is needed.
+No installation is required.
 
 ### Running an example
 
@@ -66,7 +60,7 @@ is always welcome.
 ## Future releases
 will include
 
-* More flexible plotting interface and customization
+* more flexible plotting interface and customization
 
 * adding title or ending phrase
 
