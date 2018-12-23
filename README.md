@@ -4,7 +4,7 @@ This is a python script that generates *nice* written messages from a audio reco
 
 ![Alt text](./written_letters/cortazar.jpg?raw=true "Title")
 
-Instead of using characters, writes a *message* using the waveform of the audio and separating it by *sound syllables*.
+Instead of using characters, it writes a *message* using the waveform of the audio and separates it by *sound syllables*.
 
 ## Getting Started
 
@@ -18,21 +18,19 @@ Clone the repo and be sure to have the needed packages listed in [requirements.t
 
 ### Prerequisites
 
-Install the packages in [requirements.txt](requirements.txt) either using pip, conda or compiling them.
+Install the packages in [requirements.txt](requirements.txt) either using pip, conda or compiling them from source.
 
 No installation is required.
 
 ### Running an example
 
-To run a test use the provided audio example.
-
+To run a test use the provided audio example
 ```
 python audiowriter.py ./audio/cortazar.m4a
 ```
-
 The corresponding message will be saved in `./written_letters/`
 
-## Letterizing your own audios
+## Letterizing your own audio records
 
 For visual reasons we recommend to use audios of around 30 seconds.
 The audio filename must be provided.
@@ -50,7 +48,6 @@ There are some parameters and options that allow you to customize the output of 
 ```
 python audiowriter.py ./audio/filename [options]
 ```
-
 
 
 ## Contributing
