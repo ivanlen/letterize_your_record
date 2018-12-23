@@ -38,7 +38,7 @@ if __name__ == '__main__':
     # lines_in_figure = 5, #OK
     # figure_extension = 'jpg'
 
-    parser.add_option("-f", "--fullstop",
+    parser.add_option("-s", "--fullstop",
                       dest="full_stop_time",
                       default=-1,
                       help="make full stop if te time is bigger than value, -1 --> no full stop")
