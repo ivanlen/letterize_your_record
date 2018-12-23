@@ -9,7 +9,7 @@ import matplotlib.pyplot as plt
 class Writer(object):
     def __init__(self, filename,
                  max_sampling_rate=22050 // 4,
-                 loudness_tresh=0.04,
+                 loudness_thresh=0.04,
                  plot_downsampling_factor=5,
                  full_stop_time=1.2,
                  lines_in_figure=5,
@@ -17,7 +17,7 @@ class Writer(object):
 
         self.filename = filename
         self.max_sampling_rate = max_sampling_rate
-        self.loudness_tresh = loudness_tresh
+        self.loudness_thresh = loudness_thresh
         self.plot_downsampling_factor = plot_downsampling_factor
         self.full_stop_time = full_stop_time
         self.lines_in_figure = lines_in_figure
@@ -51,9 +51,9 @@ class Writer(object):
 
     def generate_phrases_filter(self):
 
-        tresh_ = (np.max(self.loudness) - np.min(self.loudness)) * self.loudness_tresh
-        tresh = np.min(self.loudness) + tresh_
-        self.filter_chunks_tresh_ok = self.loudness > tresh
+        thresh_ = (np.max(self.loudness) - np.min(self.loudness)) * self.loudness_thresh
+        thresh = np.min(self.loudness) + thresh_
+        self.filter_chunks_thresh_ok = self.loudness > thresh
 
     def generate_chunks(self):
 
@@ -64,7 +64,7 @@ class Writer(object):
         time_chunks = []
 
         # expand the filter of the chunks for the whole audio
-        for i, filt in enumerate(self.filter_chunks_tresh_ok):
+        for i, filt in enumerate(self.filter_chunks_thresh_ok):
             filter_audio += [filt] * self.n_points
         filter_audio = np.array(filter_audio)
 
@@ -82,7 +82,7 @@ class Writer(object):
         self.audio_rescaled = audio_filtered / max_audio_val  # now audio goes between (-1,1)
 
         # generate audio and time chunks
-        for i, filt in enumerate(self.filter_chunks_tresh_ok):
+        for i, filt in enumerate(self.filter_chunks_thresh_ok):
             i_ini = i * self.n_points
             if i < self.n_windows - 1:
                 i_end = (i + 1) * self.n_points
