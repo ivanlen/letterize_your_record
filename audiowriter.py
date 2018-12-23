@@ -8,7 +8,7 @@ def checks(filename, **kwargs):
         raise Exception('{} not found: please specify a valid filename'.format(filename))
 
     convert_to_int = ['lines_in_figure', 'downsampling']
-    convert_to_float = ['full_stop_time', 'downsampling']
+    convert_to_float = ['full_stop_time', 'loudness_thresh']
 
     for key in kwargs.keys():
         if key in convert_to_int:
