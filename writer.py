@@ -139,7 +139,10 @@ class Writer(object):
         plt.axis('off')
 
         filename_base = (os.path.splitext(os.path.basename((self.filename))))[0]
-        figure_filename = './' + filename_base + self.figure_extension
+        letters_path = './written_letters/'
+        if not os.path.exists(letters_path):
+            os.makedirs(letters_path)
+        figure_filename = './' + letters_path + filename_base + self.figure_extension
         print(filename_base)
         print('saving figure...')
         plt.savefig(figure_filename)
