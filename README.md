@@ -1,6 +1,6 @@
 # Letterize your record
 
-This is a python script that generates *nice* written messages from a audio records:
+This is a python script that generates *nice* written messages from audio records:
 
 ![Alt text](./written_letters/cortazar.jpg?raw=true "Title")
 
