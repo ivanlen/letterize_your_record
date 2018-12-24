@@ -26,7 +26,7 @@ No installation is required.
 
 To run a test use the provided audio example
 ```
-python audiowriter.py ./audio/cortazar.m4a
+$ python audiowriter.py ./audio/cortazar.m4a
 ```
 The corresponding message will be saved in `./written_letters/`
 
@@ -46,7 +46,7 @@ There are some parameters and options that allow you to customize the output of 
 
 
 ```
-python audiowriter.py ./audio/filename [options]
+$ python audiowriter.py ./audio/filename [options]
 ```
 
 
